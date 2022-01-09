@@ -36,8 +36,7 @@ class CoffeeShop {
         guard let price = menuBoard[coffee] else { return }
         self.customer = customer
         let canPurchase = customer.purchase(price: price)
-        
-        if (canPurchase) {
+        if canPurchase {
             totalRevenue += price
             make(coffee: coffee)
         }
